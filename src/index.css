@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sideicon {
+    @apply flex relative items-center justify-center h-20 w-20 rounded-2xl mx-auto mb-5 mt-5 text-black 
+    hover:rounded-full cursor-pointer;
+  }
+}
+
+@layer components {
+  .info {
+    @apply absolute w-auto p-4 m-2 left-32 scale-0 items-center justify-center bg-cyan-600 rounded-xl transition-all;
+  }
+}
+
+
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #e31238;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color:#a3122d}
+
+.button:active {
+  background-color: #a3122d;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.animated-background {
+  background-size: 400%;
+
+  -webkit-animation: animation 3s ease infinite;
+  -moz-animation: animation 3s ease infinite;
+  animation: animation 3s ease infinite;
+}
+
+@keyframes animation {
+  0%,
+  100% {
+      background-position: 0% 50%;
+  }
+  
+  50% {
+      background-position: 100% 50%;
+  }
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  
+.static {
+  width: auto;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+ }
+
+.static:hover {
+  opacity: 0;
+ }
+
+ .image-container:hover .static {
+  opacity: 0;
+}
+
+.image-container:hover .gif {
+  opacity: 1;
+}
+
+
